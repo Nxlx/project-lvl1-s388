@@ -8,7 +8,11 @@
   },
   "author": "Nxlx (Ilia Nesolenyi)",
   "license": "ISC",
-  "keywords": "hexlet,project,brain-games",
+  "keywords": [
+    "Brain Game",
+    "Hexlet",
+    "project"
+  ],
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
