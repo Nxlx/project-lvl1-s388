@@ -18,28 +18,21 @@ const rndmNumGenerator = () => {
 };
 
 const evenQuestion = () => {
-  const num = rndmNumGenerator();
-  const numIsEven = num % 2 === 0;
-  console.log(`Question: ${num}`);
-  const isEvenAnswer = readlineSync.question('Your answer: ');
-  if (numIsEven && isEvenAnswer === 'yes') {
-    console.log('Correct!');
-    return true;
-  }
-  if (!numIsEven && isEvenAnswer === 'no') {
-    console.log('Correct!');
-    return true;
-  }
-  console.log(`'${isEvenAnswer}' is wrong answer ;(. Correct answer was 'no'.`);
-  return false;
+  const questNum = rndmNumGenerator();
+  console.log(`Question: ${questNum}`);
+  const rightAnswer = (questNum % 2 === 0) ? 'yes' : 'no';
+  const playerAnswer = readlineSync.question('Your answer: ');
+  const checkAnswer = (playerAnswer === rightAnswer);
+  console.log((checkAnswer) ? 'Correct!' : `'${playerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
+  return checkAnswer;
 };
 
+const countAnswToWin = 3;
 export const playGameEven = () => {
   welcomeMessage();
   console.log('Answer "yes" if number even otherwise answer "no". \n');
   const playerName = getName();
-  const countToWin = 3;
-  for (let answCounter = 0; answCounter < countToWin; answCounter += 1) {
+  for (let answCounter = 0; answCounter < countAnswToWin; answCounter += 1) {
     if (evenQuestion() === false) {
       console.log(`Let's try again, ${playerName}!`);
       return;
