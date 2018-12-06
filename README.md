@@ -1,4 +1,3 @@
-##
 # nxlxbg
 Console driven brain-games.
 
@@ -8,8 +7,17 @@ Console driven brain-games.
 
 [![Build Status](https://travis-ci.org/Nxlx/project-lvl1-s388.svg?branch=master)](https://travis-ci.org/Nxlx/project-lvl1-s388)
 
-## Install game
+## Game "Even or odd"
+### Install 
+To install game use:
+```
+npm install -g nxlxbg
+```
 [![asciicast](https://asciinema.org/a/215433.svg)](https://asciinema.org/a/215433)
 
-## Start game
+### Start
+To start game use:
+```
+brain-even
+``` 
 [![asciicast](https://asciinema.org/a/215434.svg)](https://asciinema.org/a/215434)
