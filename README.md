@@ -7,17 +7,27 @@ Console driven brain-games.
 
 [![Build Status](https://travis-ci.org/Nxlx/project-lvl1-s388.svg?branch=master)](https://travis-ci.org/Nxlx/project-lvl1-s388)
 
-## Game "Even or odd"
-### Install 
-To install game use:
+## Console games pack
+
+#### Install 
+To install console game pack use:
 ```
 npm install -g nxlxbg
 ```
-[![asciicast](https://asciinema.org/a/215433.svg)](https://asciinema.org/a/215433)
+[![asciicast](https://asciinema.org/a/215571.svg)](https://asciinema.org/a/215571)
 
-### Start
+### Game "Even or odd"
+#### Start game
 To start game use:
 ```
 brain-even
 ``` 
 [![asciicast](https://asciinema.org/a/215434.svg)](https://asciinema.org/a/215434)
+
+### Game "Calculator in brain"
+#### Start game
+To start game use:
+```
+brain-calc
+``` 
+[![asciicast](https://asciinema.org/a/215569.svg)](https://asciinema.org/a/215569)
