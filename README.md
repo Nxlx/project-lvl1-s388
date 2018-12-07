@@ -39,3 +39,11 @@ To start game use:
 brain-gcd
 ``` 
 [![asciicast](https://asciinema.org/a/215676.svg)](https://asciinema.org/a/215676)
+
+### Game "Arithmetic progression"
+#### Start game
+To start game use:
+```
+brain-progression
+``` 
+[![asciicast](https://asciinema.org/a/215704.svg)](https://asciinema.org/a/215704)
