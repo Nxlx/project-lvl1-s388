@@ -1,7 +1,7 @@
 import gameFlow from '..';
 import generateRandomNum from '../utils';
 
-const intro = 'What number is missing in the progression';
+const intro = 'What number is missing in the progression?';
 const progressionLength = 10;
 
 const hideNumInProgression = (startNum, step, hidePosition) => {
