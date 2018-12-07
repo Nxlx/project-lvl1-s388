@@ -1,14 +1,12 @@
-import { rndmNumGen, gameRound, gameFlow } from '..';
+import gameFlow from '..';
+import rndmNumGen from '../utils';
 
 const intro = 'Answer "yes" if number even otherwise answer "no". \n';
-const difficulty = 5;
-
-const newRound = () => {
-  const gameQuest = rndmNumGen(difficulty);
-  const rightAnswer = (gameQuest % 2 === 0) ? 'yes' : 'no';
-  return gameRound(gameQuest, rightAnswer);
+const isEven = number => number % 2 === 0;
+const newQuestion = () => {
+  const gameQuest = rndmNumGen(1, 999);
+  const rightAnswer = isEven(gameQuest) ? 'yes' : 'no';
+  return { gameQuest, rightAnswer };
 };
 
-const gameEvenStart = () => gameFlow(intro, newRound);
-
-export default gameEvenStart;
+export default () => gameFlow(intro, newQuestion);

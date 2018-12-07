@@ -1,9 +1,19 @@
-import {
-  rndmNumGen, gameRound, gameFlow, rndmOperatorGen,
-} from '..';
+import gameFlow from '..';
+import rndmNumGen from '../utils';
 
 const intro = 'What is the result of the expression? \n';
-const difficulty = 2;
+
+export const rndmOperatorGen = () => {
+  const minQtty = 1;
+  const maxQtty = 3;
+  const rand = rndmNumGen(minQtty, maxQtty);
+  switch (rand) {
+    case 1: return '-';
+    case 2: return '*';
+    case 3: return '+';
+    default: return undefined;
+  }
+};
 
 const calculationQuest = (firstNum, secondNum, operator) => {
   switch (operator) {
@@ -14,15 +24,13 @@ const calculationQuest = (firstNum, secondNum, operator) => {
   }
 };
 
-const newRound = () => {
-  const firstNum = rndmNumGen(difficulty);
-  const secondNum = rndmNumGen(difficulty);
+const newQuestion = () => {
+  const firstNum = rndmNumGen(1, 100);
+  const secondNum = rndmNumGen(1, 100);
   const operator = rndmOperatorGen();
   const gameQuest = `${firstNum} ${operator} ${secondNum}`;
   const rightAnswer = calculationQuest(firstNum, secondNum, operator);
-  return gameRound(gameQuest, rightAnswer);
+  return { gameQuest, rightAnswer };
 };
 
-const gameCalcStart = () => gameFlow(intro, newRound);
-
-export default gameCalcStart;
+export default () => gameFlow(intro, newQuestion);

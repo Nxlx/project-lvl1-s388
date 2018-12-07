@@ -11,27 +11,7 @@ const getName = () => {
   return name;
 };
 
-export const rndmNumGen = (difficulty) => {
-  const maxNumLength = difficulty;
-  const rndmNumLength = Math.floor(Math.random() * maxNumLength + 1);
-  const rndmNum = Math.floor((10 ** rndmNumLength) * Math.random());
-  return rndmNum;
-};
-
-export const rndmOperatorGen = () => {
-  const minQtty = 1;
-  const maxQtty = 3;
-  let rand = minQtty + Math.random() * (maxQtty + 1 - minQtty);
-  rand = Math.floor(rand);
-  switch (rand) {
-    case 1: return '-';
-    case 2: return '*';
-    case 3: return '+';
-    default: return undefined;
-  }
-};
-
-export const gameRound = (gameQuest, rightAnswer) => {
+const gameRound = (gameQuest, rightAnswer) => {
   console.log(`Question: ${gameQuest}`);
   const playerAnswer = readlineSync.question('Your answer: ');
   const checkAnswer = (playerAnswer === `${rightAnswer}`);
@@ -39,20 +19,16 @@ export const gameRound = (gameQuest, rightAnswer) => {
   return checkAnswer;
 };
 
-export const gameFlow = (intro, newRound) => {
+export default (intro, newQuestion) => {
   welcomeMessage();
   console.log(intro);
   const playerName = getName();
   for (let answCounter = 0; answCounter < countAnswToWin; answCounter += 1) {
-    if (newRound() === false) {
+    const { gameQuest, rightAnswer } = newQuestion();
+    if (gameRound(gameQuest, rightAnswer) === false) {
       console.log(`Let's try again, ${playerName}!`);
       return;
     }
   }
   console.log(`Congratulations, ${playerName}!`);
-};
-
-export const braingamesIntro = () => {
-  welcomeMessage();
-  getName();
 };
