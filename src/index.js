@@ -25,7 +25,7 @@ export default (intro, newQuestion) => {
   const playerName = getName();
   for (let answCounter = 0; answCounter < countAnswToWin; answCounter += 1) {
     const { gameQuest, rightAnswer } = newQuestion();
-    if (gameRound(gameQuest, rightAnswer) === false) {
+    if (!gameRound(gameQuest, rightAnswer)) {
       console.log(`Let's try again, ${playerName}!`);
       return;
     }

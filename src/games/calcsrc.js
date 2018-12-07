@@ -3,16 +3,9 @@ import rndmNumGen from '../utils';
 
 const intro = 'What is the result of the expression? \n';
 
-export const rndmOperatorGen = () => {
-  const minQtty = 1;
-  const maxQtty = 3;
-  const rand = rndmNumGen(minQtty, maxQtty);
-  switch (rand) {
-    case 1: return '-';
-    case 2: return '*';
-    case 3: return '+';
-    default: return undefined;
-  }
+const chooseRndOperator = () => { 
+  const strOfOperators = ('-*+');
+  return strOfOperators[rndmNumGen(1, 3)];
 };
 
 const calculationQuest = (firstNum, secondNum, operator) => {
@@ -25,9 +18,9 @@ const calculationQuest = (firstNum, secondNum, operator) => {
 };
 
 const newQuestion = () => {
-  const firstNum = rndmNumGen(1, 100);
-  const secondNum = rndmNumGen(1, 100);
-  const operator = rndmOperatorGen();
+  const firstNum = rndmNumGen(1, 10);
+  const secondNum = rndmNumGen(1, 10);
+  const operator = chooseRndOperator();
   const gameQuest = `${firstNum} ${operator} ${secondNum}`;
   const rightAnswer = calculationQuest(firstNum, secondNum, operator);
   return { gameQuest, rightAnswer };
