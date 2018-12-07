@@ -31,3 +31,11 @@ To start game use:
 brain-calc
 ``` 
 [![asciicast](https://asciinema.org/a/215569.svg)](https://asciinema.org/a/215569)
+
+### Game "Greater common divider"
+#### Start game
+To start game use:
+```
+brain-gcd
+``` 
+[![asciicast](https://asciinema.org/a/215676.svg)](https://asciinema.org/a/215676)
