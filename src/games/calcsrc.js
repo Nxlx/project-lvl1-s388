@@ -3,7 +3,7 @@ import rndmNumGen from '../utils';
 
 const intro = 'What is the result of the expression? \n';
 
-const chooseRndOperator = () => { 
+const chooseRndOperator = () => {
   const strOfOperators = ('-*+');
   return strOfOperators[rndmNumGen(1, 3)];
 };
