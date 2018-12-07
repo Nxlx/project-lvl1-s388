@@ -14,7 +14,7 @@ To install console game pack use:
 ```
 npm install -g nxlxbg
 ```
-[![asciicast](https://asciinema.org/a/215571.svg)](https://asciinema.org/a/215571)
+[![asciicast](https://asciinema.org/a/215775.svg)](https://asciinema.org/a/215775)
 
 ### Game "Even or odd"
 #### Start game
@@ -22,7 +22,7 @@ To start game use:
 ```
 brain-even
 ``` 
-[![asciicast](https://asciinema.org/a/215434.svg)](https://asciinema.org/a/215434)
+[![asciicast](https://asciinema.org/a/215781.svg)](https://asciinema.org/a/215781)
 
 ### Game "Calculator in brain"
 #### Start game
@@ -30,7 +30,7 @@ To start game use:
 ```
 brain-calc
 ``` 
-[![asciicast](https://asciinema.org/a/215569.svg)](https://asciinema.org/a/215569)
+[![asciicast](https://asciinema.org/a/215780.svg)](https://asciinema.org/a/215780)
 
 ### Game "Greater common divider"
 #### Start game
@@ -38,7 +38,7 @@ To start game use:
 ```
 brain-gcd
 ``` 
-[![asciicast](https://asciinema.org/a/215676.svg)](https://asciinema.org/a/215676)
+[![asciicast](https://asciinema.org/a/215779.svg)](https://asciinema.org/a/215779)
 
 ### Game "Arithmetic progression"
 #### Start game
@@ -46,4 +46,12 @@ To start game use:
 ```
 brain-progression
 ``` 
-[![asciicast](https://asciinema.org/a/215704.svg)](https://asciinema.org/a/215704)
+[![asciicast](https://asciinema.org/a/215778.svg)](https://asciinema.org/a/215778)
+
+### Game "Prime or not"
+#### Start game
+To start game use:
+```
+brain-prime
+``` 
+[![asciicast](https://asciinema.org/a/215776.svg)](https://asciinema.org/a/215776)
