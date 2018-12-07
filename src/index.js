@@ -21,7 +21,7 @@ const gameRound = (gameQuest, rightAnswer) => {
 
 export default (intro, newQuestion) => {
   welcomeMessage();
-  console.log(intro);
+  console.log(intro, '\n');
   const playerName = getName();
   for (let answCounter = 0; answCounter < countAnswToWin; answCounter += 1) {
     const { gameQuest, rightAnswer } = newQuestion();

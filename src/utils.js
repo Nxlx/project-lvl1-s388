@@ -1,5 +1,1 @@
-export default (min, max) => {
-  let rndmNum = min + Math.random() * (max + 1 - min);
-  rndmNum = Math.floor(rndmNum);
-  return rndmNum;
-};
+export default (minNum, maxNum) => Math.floor(minNum + Math.random() * (maxNum + 1 - minNum));
