@@ -4,9 +4,9 @@ import generateRandomNum from '../utils';
 const intro = 'What is the result of the expression?';
 
 const chooseRandomeOperator = () => {
-  const quantityOperatorsInSet = 3;
   const setOfOperators = ('-*+');
-  return setOfOperators[generateRandomNum(1, quantityOperatorsInSet)];
+  const operator = setOfOperators[generateRandomNum(0, 2)];
+  return operator;
 };
 
 const calculateExpression = (firstNum, secondNum, operator) => {

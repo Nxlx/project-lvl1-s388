@@ -22,9 +22,9 @@ const newQuestion = () => {
   const startNum = generateRandomNum(0, 100);
   const step = generateRandomNum(1, 5);
   const hidePosition = generateRandomNum(1, progressionLength);
-  const gameQuest = hideNumInProgression(startNum, step, hidePosition);
+  const gameQuestion = hideNumInProgression(startNum, step, hidePosition);
   const rightAnswer = findHideNumber(startNum, step, hidePosition);
-  return { gameQuest, rightAnswer };
+  return { gameQuestion, rightAnswer };
 };
 
 export default () => gameFlow(intro, newQuestion);

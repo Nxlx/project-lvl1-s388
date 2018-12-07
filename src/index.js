@@ -11,8 +11,8 @@ const getName = () => {
   return name;
 };
 
-const gameRound = (gameQuest, rightAnswer) => {
-  console.log(`Question: ${gameQuest}`);
+const gameRound = (gameQuestion, rightAnswer) => {
+  console.log('Question:', gameQuestion);
   const playerAnswer = readlineSync.question('Your answer: ');
   const checkAnswer = (playerAnswer === `${rightAnswer}`);
   console.log((checkAnswer) ? 'Correct!' : `'${playerAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);
@@ -24,8 +24,8 @@ export default (intro, newQuestion) => {
   console.log(intro, '\n');
   const playerName = getName();
   for (let answCounter = 0; answCounter < countAnswToWin; answCounter += 1) {
-    const { gameQuest, rightAnswer } = newQuestion();
-    if (!gameRound(gameQuest, rightAnswer)) {
+    const { gameQuestion, rightAnswer } = newQuestion();
+    if (!gameRound(gameQuestion, rightAnswer)) {
       console.log(`Let's try again, ${playerName}!`);
       return;
     }
